@@ -1,10 +1,11 @@
 import React from 'react';
 import Input from './components/Input';
+import "./App.css"
 
 const App = () => {
   return (
     <div>
-      <h1>React Storage Example</h1>
+      
       <Input />
     </div>
   );

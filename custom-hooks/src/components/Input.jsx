@@ -1,8 +1,8 @@
-import React from 'react';
-import useStorage from './useStorage';
+import React from "react";
+import useStorage from "./useStorage";// Import the external CSS file
 
 const Input = () => {
-  const [inputFieldValue, setInputFieldValue] = useStorage('inputValue');
+  const [inputFieldValue, setInputFieldValue] = useStorage("inputValue");
 
   const onInputChange = (e) => {
     const newValue = e.target.value;
@@ -10,15 +10,18 @@ const Input = () => {
   };
 
   return (
-    <div>
-      <label htmlFor="textField">Text Field:</label>
+    <div className="container">
+      <label htmlFor="textField" className="label">
+        Text Field:
+      </label>
       <input
         type="text"
         id="textField"
         value={inputFieldValue}
         onChange={onInputChange}
+        className="textInput"
       />
-      <p>Value: {inputFieldValue}</p>
+      <p className="valueDisplay">Value: {inputFieldValue}</p>
     </div>
   );
 };
